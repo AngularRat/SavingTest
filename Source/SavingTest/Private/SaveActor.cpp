@@ -28,7 +28,7 @@ UTestComponent* ASaveActor::CreateTestComponent(int32 id, int32 x, int32 y, int3
 	UTestComponent* component = NewObject<UTestComponent>(this);
 	AddInstanceComponent(component);
 
-	UDataObject* dataObject = NewObject<UDataObject>();
+	UDataObject* dataObject = NewObject<UDataObject>(this, TEXT("DataObject"));
 	dataObject->Initialize(id, x, y, z);
 	component->DataObject = dataObject;
 

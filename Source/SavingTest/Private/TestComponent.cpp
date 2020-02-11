@@ -2,7 +2,7 @@
 
 UTestComponent::UTestComponent(const FObjectInitializer& ObjectInitializer) {
 	UE_LOG(LogTemp, Error, TEXT("%s Constructor (Line %s)"), *CPP_CLASS, *CPP_LINE);
-	DataObject = ObjectInitializer.CreateDefaultSubobject<UDataObject>(this, TEXT("DataObject"));
+	ObjectInitializer.CreateDefaultSubobject<UDataObject>(this, TEXT("DataObject"));
 }
 
 void UTestComponent::Serialize(FArchive& Ar) {

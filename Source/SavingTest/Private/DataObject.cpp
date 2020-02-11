@@ -8,10 +8,10 @@ void UDataObject::Serialize(FArchive& Ar) {
 	Super::Serialize(Ar);
 
 	if (Ar.IsSaving()) {
-		UE_LOG(LogTemp, Error, TEXT("%s Room Serialize Saving (Line %s)"), *CPP_CLASS, *CPP_LINE);
+		UE_LOG(LogTemp, Error, TEXT("%s Serialize Saving (Line %s) (Id: %d X: %d Y: %d Z: %d)"), *CPP_CLASS, *CPP_LINE, Id, X, Y, Z);
 	}
 	else {
-		UE_LOG(LogTemp, Error, TEXT("%s Room Serialize ?Loading? (Line %s)"), *CPP_CLASS, *CPP_LINE);
+		UE_LOG(LogTemp, Error, TEXT("%s Serialize ?Loading? (Line %s) (Id: %d X: %d Y: %d Z: %d)"), *CPP_CLASS, *CPP_LINE, Id, X, Y, Z);
 	}
 }
 
